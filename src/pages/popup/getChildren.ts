@@ -1,7 +1,7 @@
 function getConfigJSon() {
 	return new Object({
-		mode: "",
-		padding: "",
+		mode: "ECB",
+		padding: "Pkcs7",
 		size: 0,
 		key: "",
 		iv: "",

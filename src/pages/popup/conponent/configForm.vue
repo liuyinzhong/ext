@@ -29,7 +29,7 @@
 			/>
 		</el-form-item>
 		<el-form-item label="密钥" prop="key" style="margin-bottom: 10px">
-			<el-input v-model="config.key" placeholder="请输入" clearable />
+			<el-input v-model="config.key" placeholder="不填写该字段不进行解密" clearable />
 		</el-form-item>
 		<el-form-item label="iv" prop="iv" style="margin-bottom: 10px">
 			<el-input v-model="config.iv" placeholder="请输入" clearable />
