@@ -1,6 +1,6 @@
-# chrome-extension-template
+# aes 加解密插件
 
-aes 加解密插件。可实现 对 GET、POST PUT DELETE 请求和响应的解密配置
+可实现 对 GET、POST PUT DELETE 请求和响应的解密配置
 
 ## 教程
 
