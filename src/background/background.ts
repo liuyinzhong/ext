@@ -44,6 +44,7 @@ chrome.runtime.onConnect.addListener((port) => {
 	port.onMessage.addListener((msg) => {
 		// 获取存储的数据并发送
 		chrome.storage.sync.get(["configList"], function (result) {
+			debugger;
 			chromeMessage.emit(EventName.DEV_CONFIG, result.configList);
 		});
 	});
