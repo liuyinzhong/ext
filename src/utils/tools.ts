@@ -8,6 +8,8 @@
  * 怎么可能会有bug！！！
  */
 /** 写入持久化数据 */
+import { ElMessage } from "element-plus";
+
 export async function localStorageSet(key: string, value: any) {
 	await chrome.storage.local.set({ [key]: value });
 }
@@ -21,3 +23,17 @@ export async function localStorageGet(key: string, defaultValue: any) {
 	}
 	return value;
 }
+
+export const copyText = (text: string) => {
+	const el = document.createElement("textarea");
+	el.value = text;
+	document.body.appendChild(el);
+	el.select();
+	document.execCommand("copy");
+	document.body.removeChild(el);
+	// 显示提示信息
+	ElMessage({
+		message: "已复制",
+		type: "success"
+	});
+};

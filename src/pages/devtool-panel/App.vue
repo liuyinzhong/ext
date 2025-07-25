@@ -159,6 +159,7 @@ import "vue-json-pretty/lib/styles.css";
 import { ElMessage } from "element-plus";
 import { EventName, chromeMessage } from "@/utils/chrome-message";
 import { getChildren } from "../popup/getChildren";
+import { copyText } from "@/utils/tools";
 
 const configs = ref<any>([]);
 const tableData = ref<any>([]);
@@ -283,19 +284,6 @@ const getUrl = (url: any) => {
 	return obj.pathname;
 };
 
-const copyText = (text) => {
-	const el = document.createElement("textarea");
-	el.value = text;
-	document.body.appendChild(el);
-	el.select();
-	document.execCommand("copy");
-	document.body.removeChild(el);
-	// 显示提示信息
-	ElMessage({
-		message: "已复制",
-		type: "success"
-	});
-};
 const clearTable = () => {
 	tableData.value = [];
 };
